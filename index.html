@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EaS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" ></script>
+</head>
+
+<body>
+    
+    <p class="header">Etch-Sketch Demo</p>
+    <div class="etch-a-sketch">
+        <button class="etch-remove">New Grid</button>
+        <div class="etch-container"></div>
+
+    </div>
+
+
+   
+
+
+</body>
+
+<script>
+    const gridBtn = document.querySelector(".etch-remove");
+    //add a button listener, adding the ability to redo the grid
+    gridBtn.addEventListener("click", addNewGrid, false); 
+    //set up a 4x4 grid of div elements
+    setUpEtchContainer(4);
+
+
+</script>
+
+</html>

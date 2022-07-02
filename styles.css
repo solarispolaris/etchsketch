@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body{
+
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+
+.etch-a-sketch,.etch-container{
+    width: 500px;
+}
+
+.etch-a-sketch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 535px;
+   
+}
+
+.etch-container{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.etch-remove{
+    width: 100px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+
+.etch-row{
+    display: flex;
+    flex: 1;
+}
+
+.etch-box{
+    border-style: solid;
+    border-width: 1px;
+    flex: 1;
+    background-color: white;
+}
+
+
+
+
+
+.hover-on{
+    background-color: grey;
+}
+
+.drew-on{
+    background-color: black;
+}
+
+
+
+
+
