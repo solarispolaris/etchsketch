@@ -18,7 +18,7 @@ body{
 }
 
 
-.etch-a-sketch,.etch-container{
+.etch-a-sketch, .etch-container, .etch-buttons{
     width: 500px;
 }
 
@@ -36,7 +36,13 @@ body{
     height: 500px;
 }
 
-.etch-remove{
+
+.etch-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
     width: 100px;
     height: 25px;
     margin-bottom: 10px;
