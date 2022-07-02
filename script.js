@@ -50,9 +50,13 @@ function removeEtchContainer(){
 
 
 function addNewGrid(){
-    const numRow = prompt("How Many Squares Per Side?");
-    removeEtchContainer();
-    setUpEtchContainer(numRow);
+    const numRow = prompt("How Many Squares Per Side? (Up to 50)");
+    //only run functions if the correct input was given
+    if (numRow > 0 && numRow <= 50){
+        removeEtchContainer();
+        setUpEtchContainer(numRow);
+    }
+   
 }
 
 
