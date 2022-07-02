@@ -11,10 +11,12 @@
 <body>
     
     <p class="header">Pixel Draw Demo</p>
+    <p class="description">Click On the Squares to Make Them Light Up!</p>
     <div class="etch-a-sketch">
         <div class="etch-buttons">
             <button class="etch-clear">Clear</button>
-            <button class="etch-remove">New Grid</button>
+            <button class="etch-invert">Invert</button>
+            <button class="etch-grid">New Grid</button>
         </div>
         <div class="etch-container"></div>
 
@@ -27,14 +29,17 @@
 </body>
 
 <script>
-    const gridBtn = document.querySelector(".etch-remove");
+    const gridBtn = document.querySelector(".etch-grid");
     const clearBtn = document.querySelector(".etch-clear");
+    const invertBtn = document.querySelector(".etch-invert");
     //set up a 4x4 grid of div elements
     setUpEtchContainer(4);
     //add a button listener, adding the ability to redo the grid
     gridBtn.addEventListener("click", addNewGrid, false); 
     //add a button listener, adding the ability to clear the grid
     clearBtn.addEventListener("click", clearBoxes, false);
+    //add a button listener, adding the ability to invert the grid
+    invertBtn.addEventListener("click", invertBoxes, false);
 
     
 
