@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>EaS</title>
+    <title>Pixel Draw</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" ></script>
 </head>
 
 <body>
     
-    <p class="header">Etch-Sketch Demo</p>
+    <p class="header">Pixel Draw Demo</p>
     <div class="etch-a-sketch">
         <div class="etch-buttons">
             <button class="etch-clear">Clear</button>
@@ -28,10 +28,15 @@
 
 <script>
     const gridBtn = document.querySelector(".etch-remove");
-    //add a button listener, adding the ability to redo the grid
-    gridBtn.addEventListener("click", addNewGrid, false); 
+    const clearBtn = document.querySelector(".etch-clear");
     //set up a 4x4 grid of div elements
     setUpEtchContainer(4);
+    //add a button listener, adding the ability to redo the grid
+    gridBtn.addEventListener("click", addNewGrid, false); 
+    //add a button listener, adding the ability to clear the grid
+    clearBtn.addEventListener("click", clearBoxes, false);
+
+    
 
 
 </script>
