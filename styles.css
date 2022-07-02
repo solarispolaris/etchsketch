@@ -19,7 +19,14 @@ button{
 }
 
 .header{
+    font-weight: 800;
     font-size: 32px;
+    margin-bottom: 10px;  
+}
+
+.description{
+    font-weight: 400;
+    font-size: 24px;
     margin-bottom: 50px;
 }
 
@@ -67,13 +74,9 @@ button{
 
 
 
-.hover-on{
-    background-color: grey;
-}
 
-.drew-on{
-    background-color: black;
-}
+
+
 
 
 
