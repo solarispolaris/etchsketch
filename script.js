@@ -40,7 +40,23 @@ function clearBoxes(){
 
 }
 
+//invert all colored in boxes
+function invertBoxes(){
+    const etchContainer = document.querySelector(".etch-container");
+    //invert all divs inside the container by toggling the drew-on class
+    for(let childRow = etchContainer.firstChild; childRow !== null; childRow = childRow.nextSibling){
+        for(let childBox = childRow.firstChild; childBox !== null; childBox = childBox.nextSibling){
+            childBox.classList.toggle("drew-on");
+            if(childBox.classList.contains("drew-on"))
+                childBox.style.backgroundColor = "#000000";
+            else
+                childBox.style.backgroundColor = "white";
+        }
+    }
 
+}
+
+//remove all elements inside the etch-a-sketch container
 function removeEtchContainer(){
     const container = document.querySelector(".etch-container");
     while (container.firstChild) {
