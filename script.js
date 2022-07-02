@@ -3,18 +3,28 @@
 
 // highlight the mouseenter target
 function hoverOnBox(e){
-    e.target.classList.add("hover-on");
+    const drewOn = e.target.classList.contains('drew-on');
+    if(drewOn)
+        e.target.style.backgroundColor = "#363030";
+    else
+        e.target.style.backgroundColor = "#868590";
 
 }
 
 //stop hightlight of mouseenter target
 function hoverOffBox(e){
-    e.target.classList.remove("hover-on");
+    const drewOn = e.target.classList.contains('drew-on');
+    if(drewOn)
+        e.target.style.backgroundColor = "#000000";
+    else
+        e.target.style.backgroundColor = "white";
+    
 }
 
 //make a box black if clicked on. If already black, clear it
 function drawOnBox(e){
-    e.target.classList.toggle("drew-on");
+    e.target.style.backgroundColor = "#363030";
+    e.target.classList.toggle("drew-on");   
 }
 
 
