@@ -27,7 +27,33 @@ function drawOnBox(e){
     e.target.classList.toggle("drew-on");   
 }
 
+//clear all colored in boxes
+function clearBoxes(){
+    const etchContainer = document.querySelector(".etch-container");
+    //clear all divs inside the container by removing the drew-on class
+    for(let childRow = etchContainer.firstChild; childRow !== null; childRow = childRow.nextSibling){
+        for(let childBox = childRow.firstChild; childBox !== null; childBox = childBox.nextSibling){
+            childBox.classList.remove("drew-on");
+            childBox.style.backgroundColor = "white";
+        }
+    }
 
+}
+
+
+function removeEtchContainer(){
+    const container = document.querySelector(".etch-container");
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
+
+
+function addNewGrid(){
+    const numRow = prompt("How Many Squares Per Side?");
+    removeEtchContainer();
+    setUpEtchContainer(numRow);
+}
 
 
 
@@ -56,17 +82,3 @@ function setUpEtchContainer(squaresPerSide){
     }
 }
 
-function removeEtchContainer(){
-    const container = document.querySelector(".etch-container");
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
-}
-
-
-function addNewGrid(){
-    const numRow = prompt("How Many Squares Per Side?");
-    removeEtchContainer();
-    setUpEtchContainer(numRow);
-
-}
